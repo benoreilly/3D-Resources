@@ -1,0 +1,247 @@
+
+.container {
+    margin-top: 60px;
+    /* width: 60%; */
+}
+
+mark {
+  background-color: #80cbc4 ;
+  font-weight: 600;
+  /* background: none; */
+}
+
+h5 {
+  margin-top: 2rem !important;
+}
+
+span.hightlight {
+  font-weight: 600;
+}
+
+.card-title span,
+.weatherIcon {
+  font-size: 1.2rem;
+  margin-right: 10px; 
+}
+
+span.hp-Icon i.tiny {
+  vertical-align: text-bottom;
+  font-size: 1.2rem;
+  margin-right: 3px;
+}
+
+.card .card-content .card-title i.weatherIcon{
+  line-height: 16px;
+}
+
+#tTime::after,
+#tDate::after {
+  font-size: 2rem;
+  line-height: 16px;
+}
+
+#tTime::after {
+  content: " | ";
+}
+
+@media screen and (max-width: 1080px){
+  #tTime,
+  #tDate{
+    font-size: 1.2rem;
+    /* margin-right: 4px; */
+  }
+}
+
+/* @media screen and (max-width: 1080px){
+  #tTime::after {
+    content: "";
+  }
+} */
+
+@media screen and (max-width: 1080px){
+  .weather-data {
+    display: none;
+  }
+}
+
+.collection .taskItem {
+    background-color: #eee;
+}
+
+.collection .taskItem.isChecked {
+  background-color: rgba(21, 101, 192, 0.5);
+  font-weight: 500;
+}
+
+.task-categories label {
+  margin-right: 20px;
+}
+
+[type="checkbox"] + span:not(.lever) {
+  padding-left: 25px;
+}
+
+.priorityCheck {
+  margin-bottom: 10px;
+}
+
+ul.collection {
+  /* width: 1000px; */
+  margin-bottom: 20px !important;
+}
+
+.delete-item:hover {
+  cursor: pointer;
+}
+
+.slideIn {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-timing-function: linear;
+}
+
+@keyframes slideIn{
+  from {
+    margin-right: 100%;
+    width: 0;
+  }
+
+  to {
+    margin-right: 100%;
+    width: 100%;
+  }
+}
+
+.slideOut {
+  /* background-color: #26a69a; */
+  background-image: linear-gradient(to left,
+  rgba(15, 65, 60, .9) 25%,
+  rgba(15, 65, 60, .5) 50%,
+  rgba(15, 65, 60, .3) 75%);
+  color: white;
+  height: 100%;
+  width: 5%;
+  animation-name: slideout;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+
+@keyframes slideout{
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+
+#fact {
+  display:none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal.clearTaskModal{
+  width: 35%
+}
+@media screen and (max-width:1000px){
+  .modal.clearTaskModal{
+    width: 100%
+  }
+}
+.modal .modal-footer.modal-btns {
+  text-align:center;
+  margin: auto auto 10px;
+  height: 65px;
+}
+
+.modal .modal-footer.modal-btns .btn {
+  margin-right: 10px;
+}
+
+@media screen and (max-width:1000px){
+  .modal .modal-footer.modal-btns .btn {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+/* Cube Transform */
+
+.scene {
+  width: 1000px;
+  height: 1000px;
+  perspective: 400px;
+  /* margin-top: 100px */
+}
+
+.cube {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1s;
+}
+
+.cube.show-front  { transform: translateZ(-500px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-500px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-500px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-500px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-500px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-500px) rotateX(  90deg); }
+
+.cube__face {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  /* border: 2px solid black; */
+  /* line-height: 200px; */
+  /* font-size: 40px; */
+  /* font-weight: bold; */
+  /* color: white; */
+  /* text-align: center; */
+}
+
+.cube__face--front  { background: #fff; }
+.cube__face--right  { background: hsla(60, 31%, 63%, 0.7); }
+.cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+.cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+.cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+.cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+
+
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(500px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(500px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(500px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(500px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(500px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(500px); }
+
+
+.cube { transform: translateZ(-500px); }
+
+/* ---------Rotating the cube-------
+To expose any face of the cube, we’ll need a style that rotates the cube to show that face. The transform is the opposite of the corresponding face. We toggle the necessary class on the .cube to apply the appropriate transform. */
+
+.cube.show-front  { transform: translateZ(-500px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-500px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-500px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-500px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-500px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-500px) rotateX(  90deg); }
+
+.cube { transition: transform 1s; }

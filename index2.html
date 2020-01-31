@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/nebullax.png">
+  <link rel="stylesheet" href="style.css">
+  <title>3D-Nebulist</title>
+</head>
+
+
+<body>
+
+<main>
+
+<section class="categories">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="card-panel">
+					<div class="card-content">
+						<span class="flow-text teal-text" id="tTime"></span>
+						<span class="flow-text teal-text" id="tDate"></span>
+						<span class="weather-data flow-text teal-text right">
+							<span id="weather-icon"></span>
+							<span id="weather-city"></span>
+							<span id="weather-temp"></span> 
+							<span id="weather-description"></span>                   
+						</span>
+					</div>
+					<div class="card-content">
+						<form>
+							<p class="radio-group">
+								<label for="frontCube">
+									<input type="radio" id="frontCube" name="rotate-cube-side" value="front" checked /> <span>Tasks</span>
+								</label>
+								<label for="rightCube">
+									<input type="radio" id="rightCube" name="rotate-cube-side" value="right" />
+									<span>Resources</span>
+								</label>
+								<label for="backCube">
+									<input type="radio" id="backCube" name="rotate-cube-side" value="back" />
+									<span>Mind Fuel</span>
+								</label>
+								<label for="leftCube">
+									<input type="radio" id="leftCube" name="rotate-cube-side" value="left" /> 
+									<span>Left</span>
+								</label>
+								<label for="topCube">
+									<input type="radio" id="topCube" name="rotate-cube-side" value="top" /> 
+									<span>Top</span>
+								</label>
+								<label for="bottomCube">
+									<input type="radio" id="bottomCube" name="rotate-cube-side" value="bottom" /> 
+									<span>Bottom</span>
+								</label>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+            
+              <!-- <form action="#">                  
+                <div class="task-categories">
+                  <label for="genCheck">
+                      <input type="checkbox" id="genCheck" checked /> <span>General</span>
+                  </label>
+                  <label for="musicCheck">
+                      <input type="checkbox" id="musicCheck"  />
+                      <span>Music</span>
+                  </label>
+                  <label for="quoteCheck">
+                      <input type="checkbox" id="quoteCheck"   />
+                      <span>quote</span>
+                  </label>
+                  <label for="bookCheck">
+                      <input type="checkbox" id="bookCheck"  /> 
+                      <span>Book</span>
+                  </label>
+                  <label for="resourceCheck">
+                      <input type="checkbox" id="resourceCheck"   /> 
+                      <span>Resource</span>
+                  </label>
+                  <label for="miscCheck">
+                      <input type="checkbox" id="miscCheck"   /> 
+                      <span>Miscellaneous</span>
+                  </label>
+                </div>
+              </form> -->
+<section>
+  <div class="container">
+	  <div class="row">
+		  <div class="col s12">
+			  <div class="scene">
+				<div class="cube">
+					<div class="cube__face cube__face--front">  
+						<div id="main" class="card">
+							<div class="card-content">
+								<h4 class="card-title">The Nebulist</h4>
+								<div class="row">
+									<form id="task-form" autocomplete="off">
+										<div class="input-field col s12">
+											<input type="text" name='task' id='task'>
+											<label for="task">Add Something</label>
+										</div>
+										<div class="priorityCheck">
+											<label for="priCheck">
+												<input type="checkbox" id="priCheck" />
+												<span>High Significance</span>
+											</label>
+										</div>
+										<input type="submit" value="Submit" class='btn'>                        
+									</form>
+								</div>
+							</div>
+							<div class="card-action">
+								<h4 class="card-title" id="task-title">Your Tasks</h4>
+								<div class="input-field col s12">
+									<input type="text" name="filter" id="filter">
+									<label for="filter">Filter Text</label>
+								</div>
+								<ul class="collection"></ul>
+							</div>
+						</div>
+			
+						<a href="#modal1" class="btn black modal-trigger waves-effect waves-light">Clear All Entries</a>
+		
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal clearTaskModal">
+							<div class="modal-content">
+								<h5 class="center-align">Wait A Sec!</h5>
+								<p class="center-align">Are you sure you want to clear out all of your tasks?</p>
+							</div>
+							<div class="modal-footer modal-btns">
+								<a href="#!" class="modal-close clear-tasks waves-effect waves-green btn"><i class="material-icons left">delete_forever</i>Clear All Entries</a>
+								<a href="#!" class="modal-close waves-effect waves-green btn"><i class="material-icons left">cancel</i>Cancel</a>
+							</div>
+						</div> 
+					</div>
+			
+			<!-- -----------END OF FRONT CUBE--------------------- -->
+
+			<!-- ---------------START OF BACK CUBE----------------- -->
+
+            <div class="cube__face cube__face--back">
+				<div id="main" class="card">
+					<div class="card-content">
+						<span class="card-title">Mind Fuel</span>
+						<div class="row">
+							<form id="task-form" autocomplete="off">
+								<div class="input-field col s12">
+									<input type="text" name='task' id='task'>
+									<label for="task">Add Something</label>
+								</div>
+								<div class="priorityCheck">
+									<label for="priCheck">
+										<input type="checkbox" id="priCheck" />
+										<span>High Significance</span>
+									</label>
+								</div>
+								<input type="submit" value="Submit" class='btn'>                        
+							</form>
+						</div>
+					</div>
+              		<div class="card-action">
+						<h5 id="task-title">Your Lists</h5>
+						<div class="input-field col s12">
+							<input type="text" name="filter" id="filter">
+							<label for="filter">Filter Text</label>
+						</div>
+                		<ul class="collection"></ul>
+              		</div>
+              		<a href="#modal2" class="btn black modal-trigger waves-effect waves-light">Clear All Entries</a>
+          
+					<!-- Modal Structure -->
+					<div id="modal2" class="modal clearTaskModal">
+						<div class="modal-content">
+							<h5 class="center-align">Wait A Sec!</h5>
+							<p class="center-align">Are you sure you want to clear out all of your tasks?</p>
+						</div>
+						<div class="modal-footer modal-btns">
+							<a href="#!" class="modal-close clear-tasks waves-effect waves-green btn"><i class="material-icons left">delete_forever</i>Clear All Entries</a>
+							<a href="#!" class="modal-close waves-effect waves-green btn"><i class="material-icons left">cancel</i>Cancel</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+
+			<!-- --------------------END OF BACK CUBE----------------------- -->
+
+			<!-- ---------------START OF RIGHT CUBE----------------- -->
+
+
+			<div class="cube__face cube__face--right">
+				<div class="row">
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+					<div class="col s3">
+						<a href="https://www.youtube.com" class="resourceLink" target="_blank">
+							<div class="card-panel center">
+								<i class="material-icons medium">subscriptions</i>
+								<h5>YouTube</h5>							
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- --------------------END OF RIGHT CUBE----------------------- -->
+
+            <div class="cube__face cube__face--left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusantium perspiciatis nesciunt dolores modi animi impedit accusamus, ipsam itaque obcaecati dolorum officia cum earum eaque explicabo quas vel eligendi ullam.</div>
+
+            <div class="cube__face cube__face--top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eaque, veritatis praesentium hic minus debitis explicabo exercitationem pariatur dolores impedit nemo? Nobis, exercitationem illo veniam eos obcaecati vero error quaerat.</div>
+
+            <div class="cube__face cube__face--bottom">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dignissimos similique numquam itaque aperiam asperiores, dolorem eveniet amet cum! Quo similique enim ex sapiente facilis eaque voluptatem quidem perferendis ea?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, odit veniam repudiandae corrupti esse pariatur voluptatem dolores dolorum consectetur accusamus, omnis est temporibus, illum soluta. Eos explicabo vel obcaecati temporibus.</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+            
+</main>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>  
+  <script src="main.js"></script>
+  <script src="weather.js"></script>
+
+</body>
+</html>
