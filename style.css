@@ -1,8 +1,12 @@
 
-.container.scene {
+.container {
     margin-top: 60px;
-    width: 100%;
 }
+
+.scene .card.large {
+  height: 1000px;
+}
+
 
 mark {
   background-color: #80cbc4 ;
@@ -180,68 +184,89 @@ input::-webkit-inner-spin-button {
 
 /* Cube Transform */
 
+.radio-group {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 .radio-group label {
   margin-right: 10px;
 }
 
 .scene {
-  /* width: 1000px;
-  height: 1000px; */
+  width: 100%;
+  height: 800px;
+  margin-bottom: 20px;
   perspective: 1000px;
-  /* margin-top: 100px */
 }
 
 .cube {
-  /* width: 100%;
-  height: 100%; */
-  /* top: 10%;
-  left: 10%; */
+  width: 100%;
+  height: 800px;
   position: relative;
   transform-style: preserve-3d;
-  transform: translateZ(-500px);
-  transition: transform 1s;
+  transform: translateZ(-400px);
+  transition: transform 2s;
 }
 
+.cube.show-front  { transform: translateZ(-400px) rotateY(0deg); }
+.cube.show-right  { transform: translateZ(-400px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-400px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-400px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-400px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-400px) rotateX(  90deg); }
 
 .cube__face {
   position: absolute;
   width: 100%;
-  height: 100%;
-  transform-origin: 50% 50% -100px;
-  backface-visibility: hidden;
-  /* border: 2px solid black; */
-  /* line-height: 200px; */
-  /* font-size: 40px; */
-  /* font-weight: bold; */
-  /* color: white; */
-  /* text-align: center; */
+  height: 800px;
+  font-size: 2rem;
+  /* line-height: 200px;
+  font-weight: bold;
+  color: white; */
+  text-align: center;
 }
 
-.cube__face--front .card { background: hsla(120, 3%, 54%, 0.7); }
-.cube__face--right .card { background: hsla(232, 100%, 76%, 0.7); }
-.cube__face--back .card  { background: hsla(120, 100%, 50%, 0.7); }
-.cube__face--left .card  { background: hsla(180, 100%, 50%, 0.7); }
-.cube__face--top .card  { background: hsla(240, 100%, 50%, 0.7); }
+.cube__face--front .card  { background: hsla(  0, 100%, 50%, 0.7); }
+.cube__face--right .card  { background: hsla( 60, 100%, 50%, 0.7); }
+.cube__face--back  .card  { background: hsla(120, 100%, 50%, 0.7); }
+.cube__face--left  .card  { background: hsla(180, 100%, 50%, 0.7); }
+.cube__face--top   .card  { background: hsla(240, 100%, 50%, 0.7); }
 .cube__face--bottom .card { background: hsla(300, 100%, 50%, 0.7); }
 
+.cube__face--front  { transform: rotateY(  0deg) translateZ(400px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(400px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(400px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(400px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(400px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(400px); }
 
 
-.cube__face--front  { transform: rotateY(  0deg) translateZ(500px); }
-.cube__face--right  { transform: rotateY( 90deg) translateZ(500px); }
-.cube__face--back   { transform: rotateY(180deg) translateZ(500px); }
-.cube__face--left   { transform: rotateY(-90deg) translateZ(500px); }
-.cube__face--top    { transform: rotateX( 90deg) translateZ(500px); }
-.cube__face--bottom { transform: rotateX(-90deg) translateZ(500px); }
 
+/* Footer */
 
-/* ---------Rotating the cube-------
-To expose any face of the cube, we’ll need a style that rotates the cube to show that face. The transform is the opposite of the corresponding face. We toggle the necessary class on the .cube to apply the appropriate transform. */
+.footer-site-logo {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  animation: 3s linear 2.5 alternate slidein;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  opacity: 9;
+}
 
-.cube.show-front  { transform: translateZ(-500px) rotateY(   0deg); }
-.cube.show-right  { transform: translateZ(-500px) rotateY( -90deg); }
-.cube.show-back   { transform: translateZ(-500px) rotateY(-180deg); }
-.cube.show-left   { transform: translateZ(-500px) rotateY(  90deg); }
-.cube.show-top    { transform: translateZ(-500px) rotateX( -90deg); }
-.cube.show-bottom { transform: translateZ(-500px) rotateX(  90deg); }
-
-.cube { transition: transform 1s; }
+@keyframes slidein {
+  0% {
+    margin-left: -80%;
+  }
+  100% {
+    margin-left: 80%;
+    transform: rotate(360deg);
+  }
+}
