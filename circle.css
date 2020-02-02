@@ -2,15 +2,23 @@
 
   
   .holder {
-    width: 500px;
+    width: 100px;
     height: 250px;
     position: relative;
+  }
+
+  .holder.right {
+    right: 25%;
+  }
+
+  .holder.left {
+    left: 15%;
   }
   .holder .circle {
     border-radius: 100% 100% 0 0;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 100%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     -webkit-transform-origin: bottom center;
@@ -23,10 +31,10 @@
     width: 25px;
     height: 12.5px;
     z-index: 15;
-    -webkit-animation: circle-1 10s 1 ease-in-out;
-            animation: circle-1 10s 1 ease-in-out;
+    -webkit-animation: circle-2  10s 2  ease-in-out;
+            animation: circle-2  10s 2  ease-in-out;
   }
-  @-webkit-keyframes circle-1 {
+  @-webkit-keyframes circle-2  {
     0% {
       -webkit-transform: translateX(-50%) rotate(0deg);
               transform: translateX(-50%) rotate(0deg);
@@ -36,7 +44,7 @@
               transform: translateX(-50%) rotate(-360deg);
     }
   }
-  @keyframes circle-1 {
+  @keyframes circle-2  {
     0% {
       -webkit-transform: translateX(-50%) rotate(0deg);
               transform: translateX(-50%) rotate(0deg);
@@ -53,8 +61,8 @@
     width: 31px;
     height: 15.5px;
     z-index: 14;
-    -webkit-animation: circle-2 10s 1 ease-in-out;
-            animation: circle-2 10s 1 ease-in-out;
+    -webkit-animation: circle-2 10s 2  ease-in-out;
+            animation: circle-2 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-2 {
     0% {
@@ -83,8 +91,8 @@
     width: 62px;
     height: 31px;
     z-index: 13;
-    -webkit-animation: circle-3 10s 1 ease-in-out;
-            animation: circle-3 10s 1 ease-in-out;
+    -webkit-animation: circle-3 10s 2  ease-in-out;
+            animation: circle-3 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-3 {
     0% {
@@ -113,8 +121,8 @@
     width: 93px;
     height: 46.5px;
     z-index: 12;
-    -webkit-animation: circle-4 10s 1 ease-in-out;
-            animation: circle-4 10s 1 ease-in-out;
+    -webkit-animation: circle-4 10s 2  ease-in-out;
+            animation: circle-4 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-4 {
     0% {
@@ -143,8 +151,8 @@
     width: 124px;
     height: 62px;
     z-index: 11;
-    -webkit-animation: circle-5 10s 1 ease-in-out;
-            animation: circle-5 10s 1 ease-in-out;
+    -webkit-animation: circle-5 10s 2  ease-in-out;
+            animation: circle-5 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-5 {
     0% {
@@ -173,8 +181,8 @@
     width: 155px;
     height: 77.5px;
     z-index: 10;
-    -webkit-animation: circle-6 10s 1 ease-in-out;
-            animation: circle-6 10s 1 ease-in-out;
+    -webkit-animation: circle-6 10s 2  ease-in-out;
+            animation: circle-6 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-6 {
     0% {
@@ -203,8 +211,8 @@
     width: 186px;
     height: 93px;
     z-index: 9;
-    -webkit-animation: circle-7 10s 1 ease-in-out;
-            animation: circle-7 10s 1 ease-in-out;
+    -webkit-animation: circle-7 10s 2  ease-in-out;
+            animation: circle-7 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-7 {
     0% {
@@ -233,8 +241,8 @@
     width: 217px;
     height: 108.5px;
     z-index: 8;
-    -webkit-animation: circle-8 10s 1 ease-in-out;
-            animation: circle-8 10s 1 ease-in-out;
+    -webkit-animation: circle-8 10s 2  ease-in-out;
+            animation: circle-8 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-8 {
     0% {
@@ -263,8 +271,8 @@
     width: 248px;
     height: 124px;
     z-index: 7;
-    -webkit-animation: circle-9 10s 1 ease-in-out;
-            animation: circle-9 10s 1 ease-in-out;
+    -webkit-animation: circle-9 10s 2  ease-in-out;
+            animation: circle-9 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-9 {
     0% {
@@ -293,8 +301,8 @@
     width: 279px;
     height: 139.5px;
     z-index: 6;
-    -webkit-animation: circle-10 10s 1 ease-in-out;
-            animation: circle-10 10s 1 ease-in-out;
+    -webkit-animation: circle-10 10s 2  ease-in-out;
+            animation: circle-10 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-10 {
     0% {
@@ -323,10 +331,10 @@
     width: 310px;
     height: 155px;
     z-index: 5;
-    -webkit-animation: circle-11 10s 1 ease-in-out;
-            animation: circle-11 10s 1 ease-in-out;
+    -webkit-animation: circle-12  10s 2  ease-in-out;
+            animation: circle-12  10s 2  ease-in-out;
   }
-  @-webkit-keyframes circle-11 {
+  @-webkit-keyframes circle-12  {
     0% {
       -webkit-transform: translateX(-50%) rotate(0deg);
               transform: translateX(-50%) rotate(0deg);
@@ -336,7 +344,7 @@
               transform: translateX(-50%) rotate(-3960deg);
     }
   }
-  @keyframes circle-11 {
+  @keyframes circle-12  {
     0% {
       -webkit-transform: translateX(-50%) rotate(0deg);
               transform: translateX(-50%) rotate(0deg);
@@ -353,8 +361,8 @@
     width: 341px;
     height: 170.5px;
     z-index: 4;
-    -webkit-animation: circle-12 10s 1 ease-in-out;
-            animation: circle-12 10s 1 ease-in-out;
+    -webkit-animation: circle-12 10s 2  ease-in-out;
+            animation: circle-12 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-12 {
     0% {
@@ -383,8 +391,8 @@
     width: 372px;
     height: 186px;
     z-index: 3;
-    -webkit-animation: circle-13 10s 1 ease-in-out;
-            animation: circle-13 10s 1 ease-in-out;
+    -webkit-animation: circle-13 10s 2  ease-in-out;
+            animation: circle-13 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-13 {
     0% {
@@ -413,8 +421,8 @@
     width: 403px;
     height: 201.5px;
     z-index: 2;
-    -webkit-animation: circle-14 10s 1 ease-in-out;
-            animation: circle-14 10s 1 ease-in-out;
+    -webkit-animation: circle-14 10s 2  ease-in-out;
+            animation: circle-14 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-14 {
     0% {
@@ -443,8 +451,8 @@
     width: 434px;
     height: 217px;
     z-index: 1;
-    -webkit-animation: circle-15 10s 1 ease-in-out;
-            animation: circle-15 10s 1 ease-in-out;
+    -webkit-animation: circle-15 10s 2  ease-in-out;
+            animation: circle-15 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-15 {
     0% {
@@ -473,8 +481,8 @@
     width: 465px;
     height: 232.5px;
     z-index: 0;
-    -webkit-animation: circle-16 10s 1 ease-in-out;
-            animation: circle-16 10s 1 ease-in-out;
+    -webkit-animation: circle-16 10s 2  ease-in-out;
+            animation: circle-16 10s 2  ease-in-out;
   }
   @-webkit-keyframes circle-16 {
     0% {
