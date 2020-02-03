@@ -35,6 +35,10 @@ var tTime = document.getElementById('tTime').innerText = t;
 }
 
 
+// Auto init
+
+M.AutoInit();
+
 // Load event listeners
 
 loadEventListeners();
@@ -311,5 +315,19 @@ function filterTasks(e){
 
           
  
+// Init pushpin
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     var elems = document.querySelectorAll('.pushpin');
+//     var instances = M.PushPin.init(elems, options {
+//         top: 40px;
+//     });
+// })
+
+$(document).ready(function(){
+    $('.pushpin').pushpin();
+  });
+        
 
 
+var instance = M.Pushpin.getInstances(elems);
