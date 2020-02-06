@@ -331,3 +331,23 @@ $(document).ready(function(){
 
 
 var instance = M.Pushpin.getInstances(elems);
+
+
+
+
+
+
+setTimeout(function(){
+    console.log('Page has been refreshed');
+    window.location.reload();
+ }, 5000);
+ 
+ 
+// window.onload = setupRefresh;
+// function setupRefresh() {
+//     setTimeout(refreshPage, 5000);
+// }
+// function refreshPage() {
+//     console.log('Page has been refreshed')
+//     window.location.reload();
+// };
