@@ -338,10 +338,11 @@ var instance = M.Pushpin.getInstances(elems);
 
 
 setInterval(function(){
-    console.log('Page has been refreshed');
+    
     location.reload(true);
  }, 5000);
  
+ console.log('Page has been refreshed');
  
 // window.onload = setupRefresh;
 // function setupRefresh() {
