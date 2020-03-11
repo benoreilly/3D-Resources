@@ -1,5 +1,7 @@
 
+
 body, html { height: 100%; }
+
 
 
 .container {
@@ -70,6 +72,33 @@ content: " | ";
   display: none;
 }
 }
+
+.nebLogo {
+  margin: auto;
+  animation: logoSpin 5s linear 0s normal infinite;
+  transform-style: preserve-3d;
+  transform: rotate(0deg);
+  opacity: 9;
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg);
+    margin-left: 10%;
+  }
+  100% {
+    transform:  rotate(360deg);
+    margin-left: 50%; 
+  }
+}
+
+
+/* Pushpin */
+.pinned {
+  position: fixed !important;
+  top: 100px;
+}
+
 
 .collection .taskItem {
   background-color: #eee;
@@ -219,7 +248,7 @@ margin-right: 10px;
   transform-style: preserve-3d;
   transform: translateZ(-25vw);
   -moz-transform: translateZ(-25vw);
-  transition: transform 2s;
+  transition: transform 1s;
   /* top: 50%; */
   }
   
@@ -252,9 +281,7 @@ margin-right: 10px;
   .cube__face--right  { transform: rotateY( 90deg) translateZ(25vw); }
   .cube__face--back   { transform: rotateY(180deg) translateZ(25vw); }
   .cube__face--left   { transform: rotateY(-90deg) translateZ(25vw); }
-  .cube__face--top    { 
-  transform: rotateX( 90deg) translateZ(22vw);
-  }
+  .cube__face--top    { transform: rotateX( 90deg) translateZ(22vw); }
   .cube__face--bottom { transform: rotateX(-90deg) translateZ(21vw); }
 
 
@@ -544,17 +571,9 @@ opacity: 9;
 }
 
 
-// Class for when element is above threshold
-.pin-top {
-  position: relative;
-}
 
-// Class for when element is below threshold
-.pin-bottom {
-  position: relative;
-}
 
-// Class for when element is pinned
-.pinned {
+/* Class for when element is pinned */
+/* .pinned {
   position: fixed !important;
-}
+} */
