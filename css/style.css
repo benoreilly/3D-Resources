@@ -368,6 +368,7 @@ opacity: 9;
   box-shadow: 0 0 0 0;
   /* opacity: 1; */
   animation: circle 1s infinite ease;
+  animation-duration: ;
   /* z-index: 1; */
 }
 
@@ -514,12 +515,6 @@ opacity: 9;
     transform:  rotate(360deg);
     color: teal;
   }
-  /* 75% {
-    transform: rotate(-540deg);
-  } */
-  /* 100% {
-    transform: rotate(0deg);
-  }  */
 }
 
 

@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.CustomBrowser": "Firefox"
+    "liveServer.settings.CustomBrowser": "Firefox",
+    "liveServer.settings.port": 5501
 }
